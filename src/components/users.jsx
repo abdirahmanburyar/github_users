@@ -25,12 +25,14 @@ export default class Users extends Component {
        console.log(users)
         return (
             <Fragment>
-                <h1>Users</h1>
+                <h1 className="head">Users</h1>
                 <SearchBox onChange={this.onChange} />
                 <div className="users">
-                    {
-                        searchUser && searchUser.length === 0 ? 
-                    (<h1 className="not_found">{search}no Found</h1>) :
+                    {   !users ? (<div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>) :
+                        searchUser && searchUser.length < 0 ? 
+                    (<h1 className="not_found">{search.toLowerCase()} no Found</h1>) :
                          searchUser.map(({id, ...userMaps}) => <UsersList key={id} { ...userMaps } /> )
                     }
                 </div>
