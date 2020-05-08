@@ -22,10 +22,9 @@ export default class Users extends Component {
     render(){
         const { users, search } = this.state
         const searchUser = users.filter(user => user.login.toLowerCase().includes(search.toLowerCase()))
-       console.log(users)
         return (
             <Fragment>
-                <h1 className="head">Users</h1>
+                <h1 className="head">Github Users</h1>
                 <SearchBox onChange={this.onChange} />
                 <div className="users">
                     {   !users ? (<div class="spinner-border" role="status">
