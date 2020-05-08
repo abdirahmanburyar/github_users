@@ -1,0 +1,42 @@
+.card{
+    width: 250px;
+    box-sizing: border-box;
+}
+.card:hover{
+    box-shadow: 0px 0px 2px 1px gold;
+    padding: 5px;
+}
+.card .card-body, .list-group{
+    cursor: pointer;
+    padding: 5px !important;
+}
+.card img{
+    width: 100% !important;
+}
+.users{
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 3px;
+}
+.seachInput{
+    width: 100%;
+    margin: auto;
+    border: none;
+    background: none;
+    border-bottom: 1px solid black;
+}
+.not_found{
+    width: 60%;
+    margin: 70px auto;
+    border: 1px solid red;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d66464;
+    border-radius: 5px;
+}
